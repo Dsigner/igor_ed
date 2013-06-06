@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @mgoal.description %>
+</p>
+
+<p>
+  <b>Xp value:</b>
+  <%= @mgoal.xp_value %>
+</p>
+
+
+<%= link_to 'Edit', edit_mgoal_path(@mgoal) %> |
+<%= link_to 'Back', mgoals_path %>

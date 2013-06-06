@@ -1,0 +1,37 @@
+<h1>Listing students</h1>
+
+<table>
+  <tr>
+    <th>Avatar</th>
+    <th>Bio</th>
+    <th>Projects</th>
+    <th>Xp</th>
+    <th>Grade</th>
+    <th>Name</th>
+    <th>Badges</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @students.each do |student| %>
+  <tr>
+    <td>
+	<%= image_tag(student.avatar, :class => 'list_image' ) %>
+	</td>
+    <td><%= student.bio %></td>
+    <td><%= student.projects %></td>
+    <td><%= student.xp %></td>
+    <td><%= student.grade %></td>
+    <td><%= student.name %></td>
+    <td><%= student.badges %></td>
+    <td><%= link_to 'Show', student %></td>
+    <td><%= link_to 'Edit', edit_student_path(student) %></td>
+    <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Student', new_student_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @sgoal.description %>
+</p>
+
+<p>
+  <b>Xp value:</b>
+  <%= @sgoal.xp_value %>
+</p>
+
+
+<%= link_to 'Edit', edit_sgoal_path(@sgoal) %> |
+<%= link_to 'Back', sgoals_path %>

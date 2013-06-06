@@ -1,0 +1,2 @@
+module MgoalsHelper
+end

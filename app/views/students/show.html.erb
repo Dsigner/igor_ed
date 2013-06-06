@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Avatar:</b>
+  <%= @student.avatar %>
+
+</p>
+<td>
+		<%= image_tag(@student.avatar, :class => 'list_image' ) %>
+</td>
+
+
+<p>
+  <b>Bio:</b>
+  <%= @student.bio %>
+</p>
+
+<p>
+  <b>Projects:</b>
+  <%= @student.projects %>
+</p>
+
+<p>
+  <b>Xp:</b>
+  <%= @student.xp %>
+</p>
+
+<p>
+  <b>Grade:</b>
+  <%= @student.grade %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @student.name %>
+</p>
+
+<p>
+  <b>Badges:</b>
+  <%= @student.badges %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

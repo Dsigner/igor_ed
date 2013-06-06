@@ -1,0 +1,2 @@
+module SgoalsHelper
+end

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Avatar:</b>
+  <%= @instructor.avatar %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @instructor.bio %>
+</p>
+
+<p>
+  <b>Projects:</b>
+  <%= @instructor.projects %>
+</p>
+
+<p>
+  <b>Xp:</b>
+  <%= @instructor.xp %>
+</p>
+
+<p>
+  <b>Profession:</b>
+  <%= @instructor.profession %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @instructor.name %>
+</p>
+
+<p>
+  <b>Badges:</b>
+  <%= @instructor.badges %>
+</p>
+
+
+<%= link_to 'Edit', edit_instructor_path(@instructor) %> |
+<%= link_to 'Back', instructors_path %>
