@@ -11,13 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606182037) do
+ActiveRecord::Schema.define(:version => 20130606195740) do
+
+  create_table "badge_users", :force => true do |t|
+    t.integer  "badge_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "badges", :force => true do |t|
     t.text     "description"
     t.string   "image"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "project_id"
+  end
+
+  create_table "classroom_users", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "classroom_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "classrooms", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "instructor_profiles", :force => true do |t|

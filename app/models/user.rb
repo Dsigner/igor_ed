@@ -12,4 +12,11 @@ class User < ActiveRecord::Base
   has_many :project_users
   has_many :projects, :through => :project_users
   
+  has_many :classroom_users
+  has_many :classroom, :through => :classroom_users
+  
+  
+  has_many :badge_users
+  has_many :badges, :through => :badge_users
 end
+

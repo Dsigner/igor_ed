@@ -1,4 +1,7 @@
 IgorEd::Application.routes.draw do
+  resources :classrooms
+
+
   devise_for :users
 
   devise_for :models
