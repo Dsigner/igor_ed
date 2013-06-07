@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606195740) do
+ActiveRecord::Schema.define(:version => 20130607012728) do
 
   create_table "badge_users", :force => true do |t|
     t.integer  "badge_id"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20130606195740) do
   create_table "classrooms", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "project_id"
   end
 
   create_table "instructor_profiles", :force => true do |t|
@@ -148,6 +149,7 @@ ActiveRecord::Schema.define(:version => 20130606195740) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.text     "student_ids"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

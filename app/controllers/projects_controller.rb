@@ -1,4 +1,10 @@
 class ProjectsController < ApplicationController
+  before_filter :authenticate_user!
+  before_filter :i_love_it
+  
+  def i_love_it
+    puts "I love it"
+  end
   # GET /projects
   # GET /projects.json
   def index
@@ -25,7 +31,7 @@ class ProjectsController < ApplicationController
   # GET /projects/new.json
   def new
     @project = Project.new
-
+    @students = current_user.students
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @project }

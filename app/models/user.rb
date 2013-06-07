@@ -18,5 +18,16 @@ class User < ActiveRecord::Base
   
   has_many :badge_users
   has_many :badges, :through => :badge_users
+  
+  serialize :student_ids
+  
+  def students
+    User.where(:id => student_ids)
+  end
+  
+  def add_student(student)
+    self.student_ids ||= []
+    self.student_ids << student.id
+  end
 end
 
